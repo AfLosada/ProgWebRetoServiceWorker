@@ -18,9 +18,9 @@ class Marvel extends Component {
 
         if (!navigator.onLine) {
             if (localStorage.getItem('marvel') === null)
-                this.setState({ joke: "loading..." })
+                this.setState({ marvel: "loading..." })
             else
-                this.setState({ joke: localStorage.getItem('marvel') });
+                this.setState({ marvel: localStorage.getItem('marvel') });
         }
 
         fetch("https://gateway.marvel.com:443/v1/public/characters?ts=" + ts + "&hash=" + hash + "&apikey=" + apikey)
